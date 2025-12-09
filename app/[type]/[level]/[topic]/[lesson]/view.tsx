@@ -153,7 +153,7 @@ export function LessonPageContent({ type, level, topic, lesson }: { type: string
         </div>
 
         {/* Explanations Section */}
-        {topicData.explanations && topicData.explanations.length > 0 && (
+        {!!topicData?.explanations?.length  && (
           <section className="space-y-6">
             <div className="flex items-center gap-2 mb-4">
               <BookOpen className="h-6 w-6 text-primary" />

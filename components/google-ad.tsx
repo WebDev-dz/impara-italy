@@ -36,7 +36,7 @@ export function GoogleAd({
   }, [])
 
   // Replace this with your actual Publisher ID
-  const PUBLISHER_ID = "ca-pub-XXXXXXXXXXXXXXXX" 
+  const PUBLISHER_ID = process.env.NEXT_PUBLIC_PUBLISHER_ID
 
   if (process.env.NODE_ENV === "development") {
     return (

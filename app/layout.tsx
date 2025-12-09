@@ -11,6 +11,8 @@ const _inter = Inter({ subsets: ["latin"] })
 const _playfair = Playfair_Display({ subsets: ["latin"] })
 const _notoArabic = Noto_Sans_Arabic({ subsets: ["arabic"] })
 
+const PUBLISHER_ID = process.env.NEXT_PUBLIC_PUBLISHER_ID
+
 export const metadata: Metadata = {
   title: "Impara Italiano | Learn Italian Online | تعلم الإيطالية",
   description:
@@ -28,10 +30,11 @@ export default function RootLayout({
       <head>
         <Script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-${PUBLISHER_ID}`}
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        <meta name="google-adsense-account" content="ca-pub-7793603986832708"></meta>
       </head>
       <body className={`font-sans antialiased`}>
         <ThemeProvider  attribute="class" defaultTheme="light" enableSystem>
